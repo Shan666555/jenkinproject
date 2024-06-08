@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    dockerimagename = "mayankgg2511/batch800uc3nodejscode:v1"
+    dockerimagename = "pdockersavant/ethansdemo"
     dockerImage = ""
   }
 
@@ -11,7 +11,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git ' https://github.com/mayankgg2511/uc3reponodejs.git'
+        git 'https://github.com/devopscloudworld/jenkins-nodejs-docker-k8s.git'
       }
     }
 
@@ -25,7 +25,7 @@ pipeline {
 
     stage('Pushing Image') {
       environment {
-               registryCredential = 'docker'
+               registryCredential = 'dockerhub'
            }
       steps{
         script {
