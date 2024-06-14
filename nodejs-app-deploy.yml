@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: nodejs-app
-        image: "pdockersavant/nodejs-app:latest"
+        image: "shan5666/newcicdpiple2024:v1"
         ports:
           - containerPort: 5000
 ---
